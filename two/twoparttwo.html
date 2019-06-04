@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            My Table.
+        </title>
+        <link rel="stylesheet" href="two.css">
+    </head>
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+            $("button").click(function(){
+                var value = $("#input").val().toLowerCase();
+                $("tr").filter(function() {
+                        $(this ).toggle($(this).children("td.name").text().toLowerCase().indexOf(value) > -1)
+                        $("#head").show();
+                });
+               });
+        });
+    </script>
+    <body>
+        <div>
+            <input placeholder="Search here" id ="input">
+            <button id="button" >GO</button><br>
+        </div>
+        <div><br>
+            <table class ="center">
+                <tr id ="head">
+                    <th><b>Serial Number</b></th>
+                    <th><b>Name</b></th>
+                    <th><b>Type</b></th>    
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td class="name">Shikhar Dhawan</td>
+                    <td>Batsman</td>
+                </tr>
+                <tr>
+                        <td>2.</td>
+                        <td class="name">Rohit Sharma(vc)</td>
+                        <td>Batsman</td>
+                </tr>
+                <tr>
+                        <td>3.</td>
+                        <td class="name">Virat Kohli(c)</td>
+                        <td>Batsman</td>
+                </tr>
+                <tr>
+                        <td>4.</td>
+                        <td class="name">K.L. Rahul</td>
+                        <td>Batsman</td>
+                </tr>
+                <tr>
+                        <td>5.</td>
+                        <td class="name">M.S. Dhoni(wk)</td>
+                        <td>Batsman</td>
+                </tr>
+                <tr>
+                        <td>6.</td>
+                        <td class="name">Vijay Shankar</td>
+                        <td>All-Rounder</td>
+                </tr>
+                <tr>
+                        <td>7.</td>
+                        <td class="name">Dinesh Karthik(wk)</td>
+                        <td>Batsman</td>
+                </tr>
+                <tr>
+                        <td>8.</td>
+                        <td class="name">Hardik Pandya</td>
+                        <td>All-Rounder</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td class="name">Ravindra Jadeja</td>
+                    <td>All-Rounder</td>
+                </tr>
+                <tr>
+                        <td>10.</td>
+                        <td class="name">Kedar Jadhav</td>
+                        <td>All-Rounder</td>
+                </tr>
+                <tr>
+                        <td>11.</td>
+                        <td class="name">Kuldeep Yadav</td>
+                        <td>Bowler</td>
+                </tr>
+                <tr>
+                        <td>12.</td>
+                        <td class="name">Mohammed Shami</td>
+                        <td>Bowler</td>
+                </tr>
+                <tr>
+                        <td>13.</td>
+                        <td class="name">Jasprit Bumrah</td>
+                        <td>Bowler</td>
+                </tr>
+                <tr>
+                        <td>14.</td>
+                        <td class="name">Bhuvneshwar Kumar</td>
+                        <td>Bowler</td>
+                </tr>
+                <tr>
+                        <td>15.</td>
+                        <td class="name">Yuzwendra Chahal</td>
+                        <td>Bowler</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
